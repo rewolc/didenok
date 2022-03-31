@@ -1,4 +1,4 @@
-import { TeamsState, IEmployee,IaddEmployee } from "../models/models";
+import { TeamsState, IEmployee, IaddEmployee } from "../models/models";
 import axios from "axios";
 
 import { createAsyncThunk } from "@reduxjs/toolkit";
@@ -29,23 +29,30 @@ export const postTeams = createAsyncThunk(
   }
 );
 
-export const addEmployee = createAsyncThunk(
-  "team/post",
+export const updateTeamInside = createAsyncThunk(
+  "team/updateTeamInside",
 
-  async ( props : IaddEmployee) => {
-    const response = await axios.put<IEmployee>(
+  async (props: TeamsState) => {
+    const response = await axios.put<TeamsState>(
       `https://6244272539aae3e3b74c25f9.mockapi.io/api/didenok-task/1/teams/${props.id}`,
-      
+
       {
-      employees: [{name : props.name }],
-    }
+        ...props,
+      }
+    );
+
+    return response.data;
+  }
+);
+
+export const updateTeam = createAsyncThunk(
+  "team/updateTeam",
+
+  async (id: number) => {
+    const response = await axios.delete<TeamsState>(
+      `https://6244272539aae3e3b74c25f9.mockapi.io/api/didenok-task/1/teams/${id}`
     );
     console.log(response.data);
     return response.data;
   }
 );
-
-
-
-
-

@@ -24,6 +24,8 @@ export interface IaddEmployee {
 }
 
 export interface IAction {
-  name? : string | number
-  leadName? : string | number
+  teams? : TeamsState[]
+  name? : string 
+  leadName? : string 
+  id? : number 
 }

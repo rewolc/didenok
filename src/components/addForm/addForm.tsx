@@ -1,10 +1,9 @@
 import "./addForm.scss";
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 import { postTeams } from "../../redux/tems-reducer/team-actions";
-import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/actions";
-import { teamSlice } from "../../redux/tems-reducer/teams-reducer";
 import { fetchTeams } from "../../redux/tems-reducer/team-actions";
+
 const AddForm = () => {
   const [name, newName] = useState("");
   const dispatch = useAppDispatch();
@@ -15,10 +14,15 @@ const AddForm = () => {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    setTimeout(() => newName(""), 300);
 
-    await dispatch(postTeams(name));
-    await dispatch(fetchTeams());
+    if (name.trim() !== "") {
+      setTimeout(() => newName(""), 100);
+
+      await dispatch(postTeams(name));
+      await dispatch(fetchTeams());
+    } else {
+      alert("Введите имя команды");
+    }
   };
 
   return (
