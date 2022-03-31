@@ -1,0 +1,22 @@
+.main-container {
+  background-color: white;
+  width: 74%;
+  height: 100vw;
+  padding: 3.5% 3.5% 0 3%;
+  .teams-header {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    font-weight: bold;
+
+  }
+
+  .teams-container {
+    width: 100%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    align-items: baseline;
+  }
+}

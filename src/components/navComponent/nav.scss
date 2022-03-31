@@ -1,0 +1,19 @@
+.navItem {
+  box-shadow: 10px 10px 20px 0px #1a1a3230;
+  cursor: pointer;
+  border-radius: 15px;
+
+  height: 30px;
+  width: 65%;
+  margin: 10px 0 10px 20px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 30px;
+}
+.navItem-active {
+  background: linear-gradient(116.85deg, #99b3ff 0%, #c6f221 121.5%);
+  color: white;
+}
+.navItem-passive {
+  background-color: white;
+}

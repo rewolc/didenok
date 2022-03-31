@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+}
+
+.small {
+  color: white;
+  margin: 0 10px 0 auto;
+  line-height: 21px;
+  font-size: 20px;
+
+  transition: all 1s;
+}
+.del {
+  transform: rotate(45deg);
+  &:hover {
+    background-color: rgb(163, 41, 41);
+    transform: rotate(225deg);
+  }
+}
+input {
+  border: none;
+  outline: none;
+}
+.c-active {
+  border-color: #99b3ff;
+}
+.c-passive {
+  border-color: #c6f221;
+}
+.teams-add {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f1f1f1;
+  text-align: center;
+
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+}
+.active {
+  
+  display: flex;
+}
+.passive {
+  display: none;
+}
