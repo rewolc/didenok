@@ -12,8 +12,9 @@ const Team: React.FC<{
 }> = ({ leadName, employees, id }) => {
   const dispatch = useAppDispatch();
   const { addName, removeTeam } = teamSlice.actions;
-  let show = false;
-  const [isActive, change] = useState(show);
+
+  const [isActive, changeisActive] = useState(false);
+  const [isAddActive, changeaddActive] = useState(false);
   const [name, newletter] = useState("");
 
   const handleSubmit = (event: React.FormEvent) => {
@@ -37,7 +38,7 @@ const Team: React.FC<{
     <div className="team">
       <div
         className={`leader ${isActive ? "coolColor" : ""}`}
-        onClick={() => change(!isActive)}
+        onClick={() => changeisActive(!isActive)}
       >
         {leadName}{" "}
         <span className="teams-add small del" onClick={removeClick}>
@@ -51,8 +52,18 @@ const Team: React.FC<{
           isActive ? "active" : "passive"
         }`}
       >
-        <div className="add-employee">Добавить сотрудника</div>
-        <form className={`add-employee-form `} onSubmit={handleSubmit}>
+        <div
+          className="add-employee"
+          onClick={() => changeaddActive(!isAddActive)}
+        >
+          Добавить сотрудника
+        </div>
+        <form
+          className={`add-employee-form  ${
+            isAddActive ? "active" : "passive"
+          } `}
+          onSubmit={handleSubmit}
+        >
           <input
             type="text"
             className="add-employee-text"
@@ -63,7 +74,7 @@ const Team: React.FC<{
           <input type="submit" value="+" className="teams-add small " />
         </form>
         {employees.map((i, indx) => (
-          <Employee key={indx} id={id!} leadName={leadName} name={i.name!} />
+          <Employee key={indx} id={id!} leadName={leadName} name={i.name!}  />
         ))}
       </div>
     </div>

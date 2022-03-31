@@ -6,9 +6,11 @@
   .teams-header {
     display: flex;
     flex-direction: row;
-    font-size: 30px;
     font-weight: bold;
+    .teams-text{
+      font-size: 30px;
 
+    }
   }
 
   .teams-container {

@@ -1,6 +1,6 @@
 import "./leftNav.scss";
 import logo from "../../assets/logo.svg";
-import { useState, useEffect } from "react";
+
 import NavItem from "../navComponent/nav";
 
 interface INav {
@@ -20,10 +20,7 @@ const LeftNav = () => {
 
     { active: false, text: "Настройки" },
   ];
-  
 
-  
-  
   return (
     <div className="nav-container">
       <div className="head">

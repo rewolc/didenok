@@ -15,15 +15,15 @@
 
   .employee {
     margin-left: 10px;
-    font-size: 14px;
+    font-size: 12px;
   }
   .go-to-employee {
     cursor: pointer;
-    width: 16px;
+    min-width: 16px;
     height: 16px;
     border-radius: 10px;
     background-color: rgba(198, 242, 33, 1);
-    margin: 0 5px ;
+    margin: 0 5px;
     transform: rotate(230deg);
     font-size: 11px;
     text-align: center;
@@ -31,7 +31,8 @@
     font-weight: bold;
     padding-left: 2px;
   }
-  .teams-add{
+  .teams-add {
     margin: 0 10px 0 auto;
+    min-width: 20px;
   }
 }

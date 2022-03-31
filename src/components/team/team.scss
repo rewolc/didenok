@@ -41,6 +41,7 @@
     line-height: 30px;
     text-align: center;
     transition: background-color 0.1s ease-in;
+    margin-bottom: 5px;
     &:hover {
       background-color: #c6f221;
       color: white;
@@ -48,7 +49,7 @@
   }
   .add-employee-form {
     margin: 10px 0;
-    display: flex;
+
     align-items: center;
     height: 30px;
     width: 80%;
