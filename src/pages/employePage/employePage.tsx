@@ -2,10 +2,17 @@ import "./employePage.scss";
 import { useLocation } from "react-router";
 import { useAppSelector } from "../../redux/actions";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import VariousInpt from "../../components/variousInpt/variousInpt";
 const EmployePage = () => {
-  const employeName = decodeURI(useLocation().pathname.slice(10));
+  const employeName = decodeURI(useLocation().pathname.slice(3));
+  const idEmployee = decodeURI(useLocation().pathname.slice(1,2));
+  console.log(idEmployee)
   let { teams } = useAppSelector((state) => state.teamsReducer);
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+  };
+
   const employeForm = [
     { "ФИО:": "" },
     { "Дата рождения:": "" },
@@ -18,7 +25,7 @@ const EmployePage = () => {
     { "Почта (рабочая, если есть):": "" },
     { "Дата приема на работу:": "" },
     { "Размер оплаты труда:": "" },
-    { 'Оформление': "" },
+    { Оформление: "" },
   ];
   const underForm = [
     { Клиент: "Введите текст..." },
@@ -27,12 +34,12 @@ const EmployePage = () => {
     { Дедлайн: "00.00.00 00:00" },
     { Статус: "Установить статус" },
   ];
-console.log((employeForm[0].valueOf()))
+  const navigate = useNavigate();
+  console.log(employeForm[0].valueOf());
   return (
     <div className="main-container">
       <div className="teams-header employee-header">
-        <div className="go-back">
-          {" "}
+        <div className="go-back" onClick={() => navigate("../")}>
           <span className="triangle"> ◂ </span> Вернуться назад
         </div>
         <div className="teams-text">{employeName}</div>
@@ -43,14 +50,14 @@ console.log((employeForm[0].valueOf()))
         <div className="employee-left">
           <div className="employee-filds">
             <form action="">
-              {employeForm.map((form) => (
-                <VariousInpt key={Object.keys(form).join()} />
-            
+              {employeForm.map((form,indx) => (
+               <VariousInpt key={indx} formName={Object.keys(form)} value={Object.values(form)} name={employeName} id={Number(idEmployee)}  />
               ))}
               <input
                 type="submit"
                 value="сохранить"
                 className="employee-submit"
+                onClick={handleSubmit}
               />
             </form>
           </div>
@@ -64,6 +71,7 @@ console.log((employeForm[0].valueOf()))
               type="submit"
               value="сохранить"
               className="employee-submit"
+              onClick={handleSubmit}
             />
           </form>
         </div>

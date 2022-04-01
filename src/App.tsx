@@ -27,7 +27,7 @@ const App = () => {
           element={<Main key={'main'} />} />
           <Route
           
-          path="/settings/:employe"
+          path="/:id/:employe"
           element={<EmployePage />} />
       
       </Routes>

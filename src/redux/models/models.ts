@@ -28,4 +28,6 @@ export interface IAction {
   name? : string 
   leadName? : string 
   id? : number 
+  key? : string
+  value? :string
 }

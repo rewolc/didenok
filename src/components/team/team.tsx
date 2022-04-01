@@ -40,11 +40,10 @@ const Team: React.FC<{
         className={`leader ${isActive ? "coolColor" : ""}`}
         onClick={() => changeisActive(!isActive)}
       >
-        {leadName}{" "}
+        {leadName}
         <span className="teams-add small del" onClick={removeClick}>
-          {" "}
-          +{" "}
-        </span>{" "}
+          +
+        </span>
       </div>
 
       <div
@@ -74,7 +73,7 @@ const Team: React.FC<{
           <input type="submit" value="+" className="teams-add small " />
         </form>
         {employees.map((i, indx) => (
-          <Employee key={indx} id={id!} leadName={leadName} name={i.name!}  />
+          <Employee key={indx} id={id!} leadName={leadName} name={i.name!} />
         ))}
       </div>
     </div>

@@ -1,7 +1,9 @@
 import "./leftNav.scss";
 import logo from "../../assets/logo.svg";
+import { useLocation } from "react-router-dom";
 
 import NavItem from "../navComponent/nav";
+
 
 interface INav {
   active: boolean;
@@ -9,6 +11,8 @@ interface INav {
 }
 
 const LeftNav = () => {
+  const location = useLocation().pathname.length
+
   const navItems: INav[] = [
     { active: false, text: "Главная" },
 
@@ -16,11 +20,11 @@ const LeftNav = () => {
 
     { active: false, text: "История изменений" },
 
-    { active: false, text: "Команды" },
+    { active: location === 1? true : false, text: "Команды" },
 
-    { active: false, text: "Настройки" },
+    { active: location !== 1? true : false, text: "Настройки" },
   ];
-
+ 
   return (
     <div className="nav-container">
       <div className="head">

@@ -31,7 +31,7 @@ const Employee: React.FC<{ name: string; leadName: string; id: number }> = ({
       >
         +
       </div>
-      <div className="go-to-employee" onClick={() => navigate(`/settings/${name}`)} >&#8735;</div>
+      <div className="go-to-employee" onClick={() => navigate(`/${id}/${name}`)} >&#8735;</div>
     </div>
   );
 };
