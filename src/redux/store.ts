@@ -2,16 +2,13 @@ import { configureStore } from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
 import teamsReducer from "./tems-reducer/teams-reducer";
 
-
 const rootReducer = combineReducers({
-   teamsReducer,
+  teamsReducer,
 });
 
 export const setupStore = () => {
   return configureStore({
     reducer: rootReducer,
-    
-    
   });
 };
 

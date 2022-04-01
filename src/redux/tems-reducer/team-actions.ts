@@ -1,4 +1,4 @@
-import { TeamsState, IEmployee, IaddEmployee } from "../models/models";
+import { TeamsState } from "../interfaces/interfaces";
 import axios from "axios";
 
 import { createAsyncThunk } from "@reduxjs/toolkit";

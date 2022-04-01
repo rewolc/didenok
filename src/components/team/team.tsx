@@ -1,14 +1,19 @@
-import { IEmployee } from "../../redux/models/models";
-import Employee from "../employee/employee";
-import { useState } from "react";
 import "./team.scss";
-import { teamSlice } from "../../redux/tems-reducer/teams-reducer";
+import { IEmployee } from "../../redux/interfaces/interfaces";
+import Employee from "../employee/employee";
+
+import { useState } from "react";
 import { useAppDispatch } from "../../redux/actions";
 import { updateTeam } from "../../redux/tems-reducer/team-actions";
+
+import { teamSlice } from "../../redux/tems-reducer/teams-reducer";
+
 const Team: React.FC<{
+
   leadName: string;
   employees: IEmployee[];
   id?: number;
+
 }> = ({ leadName, employees, id }) => {
   const dispatch = useAppDispatch();
   const { addName, removeTeam } = teamSlice.actions;
@@ -19,21 +24,28 @@ const Team: React.FC<{
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+    
     if (name.trim() !== "") {
+
       dispatch(addName({ leadName, name }));
       setTimeout(() => newletter(""), 100);
+      
     } else {
       alert("Введите имя сотрудника");
     }
   };
+
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
     newletter(event.currentTarget.value);
   };
+
   const removeClick = (event: React.FormEvent) => {
     event.stopPropagation();
+
     dispatch(removeTeam({ id }));
     dispatch(updateTeam(id!));
   };
+
   return (
     <div className="team">
       <div

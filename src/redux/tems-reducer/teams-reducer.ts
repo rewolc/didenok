@@ -1,4 +1,4 @@
-import { TeamsState, IEmployee, IaddEmployee, IAction } from "../models/models";
+import { TeamsState, IAction } from "../interfaces/interfaces";
 import {
   fetchTeams,
   postTeams,
@@ -48,25 +48,28 @@ export const teamSlice = createSlice({
     },
 
     removeTeam(state, action: PayloadAction<IAction>) {
-      state.teams = state.teams.filter((team) => team.id != action.payload.id);
+      state.teams = state.teams.filter((team) => team.id !== action.payload.id);
     },
-    changeEmployeeInfo (state, action: PayloadAction<IAction>){
-   
-      let key = action.payload.key
-      let value = action.payload.value
 
-      
+    changeEmployeeInfo(state, action: PayloadAction<IAction>) {
+      const { key, value, id, name } = action.payload;
+      if (typeof key !== "string") {
+        throw new Error();
+      }
       state.teams = state.teams.map((team) =>
-      team.id === action.payload.id
-        ? {
-            ...team,
-            employees: [team.employees.map(employee => employee.name === action.payload.name ? {...employee, key : value} : employee)],
-
-          }
-        : team
-    );
-  }
-},
+        +team.id === id
+          ? {
+              ...team,
+              employees: team.employees.map((employee) =>
+                employee.name === name
+                  ? { ...employee, [key]: value }
+                  : employee
+              ),
+            }
+          : team
+      );
+    },
+  },
   extraReducers: {
     [fetchTeams.fulfilled.type]: (
       state,

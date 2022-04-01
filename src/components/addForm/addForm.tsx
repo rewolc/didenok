@@ -1,7 +1,7 @@
 import "./addForm.scss";
 import { useState } from "react";
 import { postTeams } from "../../redux/tems-reducer/team-actions";
-import { useAppDispatch, useAppSelector } from "../../redux/actions";
+import { useAppDispatch } from "../../redux/actions";
 import { fetchTeams } from "../../redux/tems-reducer/team-actions";
 
 const AddForm = () => {

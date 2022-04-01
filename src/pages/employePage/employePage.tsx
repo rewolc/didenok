@@ -1,30 +1,39 @@
 import "./employePage.scss";
 import { useLocation } from "react-router";
-import { useAppSelector } from "../../redux/actions";
-import { useState } from "react";
+
 import { useNavigate } from "react-router";
+import { useAppDispatch, useAppSelector } from "../../redux/actions";
+
+import { updateTeamInside } from "../../redux/tems-reducer/team-actions";
 import VariousInpt from "../../components/variousInpt/variousInpt";
-const EmployePage = () => {
+
+const EmployePage: React.FC = () => {
+
   const employeName = decodeURI(useLocation().pathname.slice(3));
-  const idEmployee = decodeURI(useLocation().pathname.slice(1,2));
-  console.log(idEmployee)
-  let { teams } = useAppSelector((state) => state.teamsReducer);
+  const idEmployee = decodeURI(useLocation().pathname.slice(1, 2));
+
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
+  const { teams } = useAppSelector((state) => state.teamsReducer);
+
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+    dispatch(updateTeamInside(teams[+idEmployee - 1]));
   };
 
   const employeForm = [
-    { "ФИО:": "" },
-    { "Дата рождения:": "" },
-    { "Гражданство:": "" },
-    { "Адрес проживания:": "" },
+    { name: "" },
     { "Дата рождения": "" },
-    { "Должность:": "" },
-    { "Телефон:": "" },
-    { "Почта (личная):": "" },
-    { "Почта (рабочая, если есть):": "" },
-    { "Дата приема на работу:": "" },
-    { "Размер оплаты труда:": "" },
+    { Гражданство: "" },
+    { "Адрес проживания": "" },
+    { "Руководитель группы": "" },
+    { Должность: "" },
+    { Телефон: "" },
+    { "Почта (личная)": "" },
+    { "Почта (рабочая)": "" },
+    { "Дата приема на работу": "" },
+    { "Размер оплаты труда": "" },
     { Оформление: "" },
   ];
   const underForm = [
@@ -34,8 +43,7 @@ const EmployePage = () => {
     { Дедлайн: "00.00.00 00:00" },
     { Статус: "Установить статус" },
   ];
-  const navigate = useNavigate();
-  console.log(employeForm[0].valueOf());
+
   return (
     <div className="main-container">
       <div className="teams-header employee-header">
@@ -50,8 +58,14 @@ const EmployePage = () => {
         <div className="employee-left">
           <div className="employee-filds">
             <form action="">
-              {employeForm.map((form,indx) => (
-               <VariousInpt key={indx} formName={Object.keys(form)} value={Object.values(form)} name={employeName} id={Number(idEmployee)}  />
+              {employeForm.map((form, indx) => (
+                <VariousInpt
+                  key={indx}
+                  formName={Object.keys(form)}
+                  name={employeName}
+                  id={Number(idEmployee)}
+                  team={teams[+idEmployee - 1]}
+                />
               ))}
               <input
                 type="submit"
@@ -78,9 +92,8 @@ const EmployePage = () => {
       </div>
       <div className="employee-card">Занятость сотрудника</div>
       <div className="employee-works-info-container">
-        {underForm.map((form) => (
-          <div className="info-wrap">
-            {" "}
+        {underForm.map((form, indx) => (
+          <div className="info-wrap" key={indx}>
             <div className="head-wrap">
               <div className="head">{Object.keys(form)}</div>
               <div className="span-dots">...</div>
@@ -88,7 +101,7 @@ const EmployePage = () => {
             <div className="strokes">
               <div className="stroke">{Object.values(form)}</div>
               <div className="stroke">{Object.values(form)}</div>
-            </div>{" "}
+            </div>
           </div>
         ))}
       </div>

@@ -1,0 +1,22 @@
+.form-vrap {
+  display: flex;
+  margin: 15px;
+  
+  .fomrName {
+    font-weight: 900;
+
+  }
+  input {
+    box-shadow: 4px 0px 7px 3px rgb(26 26 50 / 12%);
+    height: 30px;
+   
+    margin-left: 10px;
+    border-radius: 30px;
+    padding-left: 10px;
+
+    transition: all 1s;
+    &:focus {
+      box-shadow: 4px 0px 7px 3px rgba(198, 242, 33, 1);
+    }
+  }
+}

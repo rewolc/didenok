@@ -12,8 +12,8 @@ const Employee: React.FC<{ name: string; leadName: string; id: number }> = ({
 }) => {
   const navigate = useNavigate();
 
-  let { teams } = useAppSelector((state) => state.teamsReducer);
-  let emplTeam = { ...teams.filter((team) => team.leadName === leadName) };
+  const { teams } = useAppSelector((state) => state.teamsReducer);
+  const emplTeam = { ...teams.filter((team) => team.leadName === leadName) };
 
   const dispatch = useAppDispatch();
   const { removeName } = teamSlice.actions;
@@ -31,7 +31,12 @@ const Employee: React.FC<{ name: string; leadName: string; id: number }> = ({
       >
         +
       </div>
-      <div className="go-to-employee" onClick={() => navigate(`/${id}/${name}`)} >&#8735;</div>
+      <div
+        className="go-to-employee"
+        onClick={() => navigate(`/${id}/${name}`)}
+      >
+        &#8735;
+      </div>
     </div>
   );
 };

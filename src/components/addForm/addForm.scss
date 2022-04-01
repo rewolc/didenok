@@ -6,26 +6,23 @@
   border: none;
   width: 100%;
   .add-inpt {
-  
     background-color: #f1f1f1;
     line-height: 10px;
     margin-left: 30px;
- 
+
     height: 40px;
-    width: 40%;
+    min-width: 40%;
     font-size: 15px;
     border-radius: 10px;
     padding-left: 10px;
     box-shadow: 0 0 20px 2px #1a1a3230;
     transition: all 0.5s;
     &:focus {
-      
       box-shadow: 0 0 20px 2px #c1e738d8;
     }
   }
 
   .teams-add {
-    
     font-size: 60px;
     margin-left: 25px;
     color: white;
@@ -41,4 +38,3 @@
     }
   }
 }
-

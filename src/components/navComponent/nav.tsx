@@ -1,10 +1,6 @@
 import "./nav.scss";
 
 import { useLocation } from "react-router-dom";
-interface INavItem {
-  active: boolean;
-  text: string;
-}
 
 const NavItem: React.FC<{ active: boolean; text: string }> = ({
   active,

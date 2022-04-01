@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", cursive;
+}
+
+@media (min-width: 1200px) {
+  .navItem {
+    font-size: 15px;
+    width: 65%;
+    margin: 10px 0 10px 20px;
+  }
+  .teams-text {
+    font-size: 30px;
+  }
+  .teams-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .add-employee {
+    font-size: 15px;
+  }
+  .employee-info-container {
+    display: flex;
+  }
+  .stroke {
+    font-size: 12px;
+  }
+  .employee-left {
+    width: 70%;
+    margin: auto;
+  }
+  .employee-works-info-container {
+    font-size: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .employee-card {
+    font-size: 20px;
+  }
+  .form-vrap {
+    align-items: center;
+    .fomrName {
+      font-size: 16px;
+    }
+    input {
+      font-size: 14px;
+      width: 60%;
+    }
+  }
+}
+@media (min-width: 960px) and (max-width: 1200px) {
+  .navItem {
+    font-size: 13px;
+    width: 75%;
+    margin: 10px 0 10px 20px;
+  }
+  .teams-text {
+    font-size: 25px;
+  }
+  .teams-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .add-employee {
+    font-size: 11px;
+  }
+
+  .stroke {
+    font-size: 11px;
+  }
+  .employee-left {
+    width: 70%;
+    margin: auto;
+  }
+  .employee-works-info-container {
+    font-size: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .employee-card {
+    font-size: 19px;
+  }
+  .form-vrap {
+    align-items: center;
+    .fomrName {
+      font-size: 12px;
+    }
+    input {
+      font-size: 11px;
+      width: 60%;
+    }
+  }
+}
+
+@media (min-width: 800px) and (max-width: 960px) {
+  .navItem {
+    font-size: 11px;
+    width: 75%;
+    margin: 10px 0 10px 20px;
+  }
+  .teams-text {
+    font-size: 20px;
+  }
+  .teams-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .add-employee {
+    font-size: 9px;
+  }
+  .stroke {
+    font-size: 10px;
+  }
+  .employee-left {
+    width: 70%;
+    margin: auto;
+  }
+  .employee-works-info-container {
+    font-size: 12px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+  .employee-card {
+    font-size: 18px;
+  }
+  .form-vrap {
+    align-items: center;
+    .fomrName {
+      font-size: 10px;
+    }
+    input {
+      font-size: 8px;
+      width: 60%;
+    }
+  }
+}
+@media (min-width: 600px) and (max-width: 800px) {
+  .navItem {
+    font-size: 10px;
+    width: 75%;
+    margin: 10px 0 10px 10px;
+  }
+  .teams-text {
+    font-size: 20px;
+  }
+  .teams-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .add-employee {
+    font-size: 10px;
+  }
+  .employee-info-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .stroke {
+    font-size: 10px;
+  }
+  .employee-left {
+    width: 100%;
+    margin: auto;
+  }
+  .employee-works-info-container {
+    grid-template-columns: 1fr;
+    font-size: 15px;
+  }
+  .employee-card {
+    font-size: 16px;
+  }
+  .form-vrap {
+    align-items: center;
+    .fomrName {
+      font-size: 10px;
+    }
+    input {
+      font-size: 9px;
+      width: 60%;
+    }
+  }
+}
+@media (min-width: 400px) and (max-width: 600px) {
+  .navItem {
+    font-size: 9px;
+    width: 85%;
+    margin: 7px 0;
+  }
+  .teams-text {
+    font-size: 15px;
+  }
+  .teams-container {
+    grid-template-columns: 1fr;
+  }
+  .add-employee {
+    font-size: 15px;
+  }
+  .employee-info-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .stroke {
+    font-size: 9px;
+  }
+  .employee-left {
+    width: 100%;
+    margin: auto;
+  }
+  .employee-works-info-container {
+    grid-template-columns: 1fr;
+    font-size: 14px;
+  }
+  .employee-card {
+    font-size: 13px;
+  }
+  .circle {
+    display: none;
+  }
+  .form-vrap {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .fomrName {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    input {
+      font-size: 12px;
+      width: 90%;
+      margin-bottom: 15px;
+    }
+  }
+}
+@media (min-width: 0px) and (max-width: 400px) {
+  .employee-info-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .navItem {
+    font-size: 9px;
+    width: 85%;
+    margin: 7px 0;
+  }
+  .teams-text {
+    font-size: 13px;
+  }
+  .employee-works-info-container {
+    grid-template-columns: 1fr;
+    font-size: 9px;
+  }
+  .add-employee {
+    font-size: 12px;
+  }
+  .employee-card {
+    font-size: 10px;
+  }
+  .circle {
+    display: none;
+  }
+  .form-vrap {
+    flex-direction: column;
+    align-items: flex-start;
+    .fomrName {
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+    input {
+      font-size: 10px;
+      width: 90%;
+      margin-bottom: 10px;
+    }
+  }
+}
