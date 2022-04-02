@@ -81,6 +81,7 @@ const Team: React.FC<{
             placeholder="ФИО сотрудника"
             onChange={handleChange}
             value={name}
+            maxLength={40}
           />
           <input type="submit" value="+" className="teams-add small " />
         </form>

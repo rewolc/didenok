@@ -33,6 +33,7 @@ const AddForm = () => {
         value={name}
         placeholder="Добавить команду"
         onChange={handleChange}
+        maxLength={40}
       />
       <input type="submit" className="teams-add " value="+" />
     </form>
