@@ -7,7 +7,7 @@
     box-shadow: 2px 2px 3px 0px rgba(26, 26, 50, 0.1);
     border-radius: 20px;
     height: 15px;
-    width: 150px;
+    min-width: 80px;
     text-align: center;
     line-height: 15px;
     transition: all 0.5s;
@@ -60,7 +60,7 @@
   height: 40px;
   border-radius: 30px;
   line-height: 40px;
-  padding-left: 25px;
+  padding-left: 15px;
   font-weight: 900;
   margin-top: 22px;
 }
@@ -107,7 +107,6 @@
   }
   .head {
     height: 15%;
-    line-height: 30px;
   }
   .span-dots {
     cursor: pointer;

@@ -54,7 +54,7 @@ const EmployePage: React.FC = () => {
         <div className="go-back" onClick={() => navigate("../")}>
           <span className="triangle"> ◂ </span> Вернуться назад
         </div>
-        <div className="teams-text">{employeName}</div>
+        <div className="teams-text teams-eml-text">{employeName}</div>
       </div>
       <div className="employee-card">Карточка Сотрудника</div>
       <div className="employee-info-container">

@@ -5,27 +5,20 @@
   padding: 3% 0 0 3%;
   .head {
     display: flex;
-
     .logo {
       height: 38px;
     }
     .settings {
       cursor: pointer;
       box-shadow: 10px 10px 20px 0px #1a1a3230;
-
-      min-width: 40px;
-      min-height: 40px;
       background-color: white;
       border-radius: 100%;
-      margin-left: auto;
-      margin-right: 36px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       .dots {
         box-sizing: border-box;
-        font-size: 15px;
         margin-top: -5px;
       }
     }

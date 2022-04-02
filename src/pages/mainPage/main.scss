@@ -1,23 +1,17 @@
 .main-container {
   background-color: white;
   width: 74%;
-
   padding: 3.5% 3.5% 0 3%;
   .teams-header {
     display: flex;
-
+    font-size: 25px;
     font-weight: bold;
     height: 30px;
-    .teams-text {
-      line-height: 30px;
-    }
   }
 
   .teams-container {
     width: 100%;
-
     display: grid;
-
     grid-gap: 30px;
     align-items: baseline;
   }

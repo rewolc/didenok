@@ -24,7 +24,7 @@ export const postTeams = createAsyncThunk(
         employees: [],
       }
     );
-    console.log(response.data);
+
     return response.data;
   }
 );
@@ -52,7 +52,7 @@ export const updateTeam = createAsyncThunk(
     const response = await axios.delete<TeamsState>(
       `https://6244272539aae3e3b74c25f9.mockapi.io/api/didenok-task/1/teams/${id}`
     );
-    console.log(response.data);
+
     return response.data;
   }
 );

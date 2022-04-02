@@ -14,7 +14,7 @@
       margin: 10px 0 10px 20px;
     }
   }
-  .teams-text {
+  .teams-eml-text {
     font-size: 30px;
   }
   .teams-container {
@@ -54,16 +54,26 @@
   .form-vrap {
     align-items: center;
     .fomrName {
-      font-size: 16px;
+      font-size: 14px;
     }
     input {
-      font-size: 14px;
+      font-size: 12px;
       width: 60%;
     }
   }
   .settings {
-    margin-left: auto;
-    margin-right: 36px;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    .dots {
+      font-size: 15px;
+    }
+  }
+  .add-form {
+    align-items: center;
+    .add-inpt {
+      width: 50%;
+    }
   }
   .add-form {
     align-items: center;
@@ -71,6 +81,9 @@
       font-size: 15px;
       width: 50%;
     }
+  }
+  .leader {
+    font-size: 14px;
   }
 }
 @media (min-width: 960px) and (max-width: 1200px) {
@@ -82,7 +95,7 @@
       margin: 10px 0 10px 20px;
     }
   }
-  .teams-text {
+  .teams-eml-text {
     font-size: 25px;
   }
   .teams-container {
@@ -128,8 +141,12 @@
     }
   }
   .settings {
-    margin-left: auto;
-    margin-right: 36px;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    .dots {
+      font-size: 15px;
+    }
   }
   .add-form {
     align-items: center;
@@ -137,9 +154,12 @@
       width: 50%;
     }
   }
+  .leader {
+    font-size: 12px;
+  }
 }
 
-@media (min-width: 800px) and (max-width: 960px) {
+@media (min-width: 890px) and (max-width: 960px) {
   .navItems {
     margin-top: 40px;
     .navItem {
@@ -148,7 +168,7 @@
       margin: 10px 0 10px 20px;
     }
   }
-  .teams-text {
+  .teams-eml-text {
     font-size: 20px;
   }
   .teams-container {
@@ -193,8 +213,12 @@
     }
   }
   .settings {
-    margin-left: auto;
-    margin-right: 36px;
+    width: 35px;
+    height: 35px;
+    margin: auto;
+    .dots {
+      font-size: 14px;
+    }
   }
   .add-form {
     .add-inpt {
@@ -202,8 +226,11 @@
       width: 60%;
     }
   }
+  .leader {
+    font-size: 11px;
+  }
 }
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 640px) and (max-width: 890px) {
   .navItems {
     margin-top: 40px;
     .navItem {
@@ -212,7 +239,7 @@
       margin: 10px 0 10px 10px;
     }
   }
-  .teams-text {
+  .teams-eml-text {
     font-size: 20px;
   }
   .teams-container {
@@ -261,7 +288,7 @@
     }
   }
   .add-form {
-    margin-top: 7px;
+    margin-top: 15px;
     align-items: center;
     .add-inpt {
       width: 70%;
@@ -271,8 +298,20 @@
   .teams-header {
     flex-direction: column;
   }
+  .settings {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    margin: auto 20px;
+    .dots {
+      font-size: 12px;
+    }
+  }
+  .leader {
+    font-size: 12px;
+  }
 }
-@media (min-width: 400px) and (max-width: 600px) {
+@media (min-width: 450px) and (max-width: 640px) {
   .navItems {
     margin-top: 10px;
     .navItem {
@@ -281,8 +320,8 @@
       margin: 7px 0;
     }
   }
-  .teams-text {
-    font-size: 15px;
+  .teams-eml-text {
+    font-size: 13px;
   }
   .teams-container {
     grid-template-columns: 1fr;
@@ -337,16 +376,17 @@
     }
   }
   .head {
-    width: 100%;
-
-    align-items: flex-start;
-    flex-direction: column;
     .settings {
-      margin: auto;
+      width: 25px;
+      height: 25px;
+      margin: auto 10px;
+      .dots {
+        font-size: 12px;
+      }
     }
   }
   .add-form {
-    margin-top: 7px;
+    margin-top: 15px;
     .add-inpt {
       width: 70%;
       font-size: 13px;
@@ -355,8 +395,11 @@
   .teams-header {
     flex-direction: column;
   }
+  .leader {
+    font-size: 15px;
+  }
 }
-@media (min-width: 0px) and (max-width: 400px) {
+@media (min-width: 0px) and (max-width: 450px) {
   .employee-info-container {
     flex-direction: column;
     align-items: center;
@@ -370,8 +413,9 @@
       margin: 7px 0;
     }
   }
-  .teams-text {
-    font-size: 13px;
+  .teams-eml-text {
+    font-size: 9px;
+    margin-top: 10px;
   }
   .teams-container {
     grid-template-columns: 1fr;
@@ -391,7 +435,7 @@
     }
   }
   .add-employee {
-    font-size: 12px;
+    font-size: 10px;
   }
   .employee-card {
     font-size: 10px;
@@ -413,14 +457,27 @@
     }
   }
   .head {
-    align-items: flex-start;
-    flex-direction: column;
     .settings {
-      margin: auto;
+      width: 20px;
+      height: 20px;
+      margin: auto 5px;
+      .dots {
+        font-size: 10px;
+      }
+    }
+  }
+  .add-form {
+    margin-top: 15px;
+    .add-inpt {
+      width: 70%;
+      font-size: 8px;
     }
   }
 
   .teams-header {
     flex-direction: column;
+  }
+  .leader {
+    font-size: 10px;
   }
 }
