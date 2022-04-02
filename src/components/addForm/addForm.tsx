@@ -27,7 +27,6 @@ const AddForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="add-form">
-      <input type="submit" className="teams-add " value="+" />
       <input
         type="text"
         className="add-inpt"
@@ -35,6 +34,7 @@ const AddForm = () => {
         placeholder="Добавить команду"
         onChange={handleChange}
       />
+      <input type="submit" className="teams-add " value="+" />
     </form>
   );
 };

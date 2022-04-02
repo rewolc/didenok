@@ -5,10 +5,8 @@
   padding: 3% 0 0 3%;
   .head {
     display: flex;
-    align-items: center;
 
     .logo {
-      width: 126px;
       height: 38px;
     }
     .settings {
@@ -34,12 +32,10 @@
   }
 
   .navItems {
-    margin-top: 40px;
     .navItem-cont {
       display: flex;
       align-items: center;
       .circle {
-        
         border: 4px solid;
         border-radius: 10px;
         height: 15px;

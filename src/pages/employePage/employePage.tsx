@@ -8,7 +8,7 @@ import { updateTeamInside } from "../../redux/tems-reducer/team-actions";
 import VariousInpt from "../../components/variousInpt/variousInpt";
 
 const EmployePage: React.FC = () => {
-
+  
   const employeName = decodeURI(useLocation().pathname.slice(3));
   const idEmployee = decodeURI(useLocation().pathname.slice(1, 2));
 
@@ -20,6 +20,10 @@ const EmployePage: React.FC = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     dispatch(updateTeamInside(teams[+idEmployee - 1]));
+  };
+
+  const handleCommentSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
   };
 
   const employeForm = [
@@ -85,7 +89,7 @@ const EmployePage: React.FC = () => {
               type="submit"
               value="сохранить"
               className="employee-submit"
-              onClick={handleSubmit}
+              onClick={handleCommentSubmit}
             />
           </form>
         </div>

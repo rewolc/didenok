@@ -1,6 +1,6 @@
 .employee-header {
   align-items: center;
-
+  flex-direction: row;
   .go-back {
     cursor: pointer;
     font-size: 8px;
@@ -14,7 +14,7 @@
     .triangle {
       transform: rotate(-90deg);
     }
-    &:hover{
+    &:hover {
       background-color: #f1f1f1;
     }
   }
@@ -61,7 +61,6 @@
   border-radius: 30px;
   line-height: 40px;
   padding-left: 25px;
-  
   font-weight: 900;
   margin-top: 22px;
 }
@@ -79,32 +78,25 @@
   line-height: 20px;
   margin-left: 15px;
   transition: all 1s;
-  &:hover{
+  &:hover {
     background: rgb(137, 169, 23);
   }
 }
 
 .employee-works-info-container {
   display: grid;
-  
-  grid-template-rows: 200px;
   grid-gap: 2px;
-
-  box-shadow: 10px 10px 20px 0px rgba(26, 26, 50, 0.07);
+  box-shadow: 14px 12px 16px 4px rgb(26 26 50 / 7%);
   border-radius: 30px;
   margin-top: 30px;
+
+  &:last-child {
+    border-radius: 0 0 30px 30px;
+  }
 
   .info-wrap {
     height: 100%;
     background: rgba(241, 241, 241, 1);
-
-    &:first-child {
-      border-radius: 30px 0 0 30px;
-    }
-
-    &:last-child {
-      border-radius: 0 30px 30px 0;
-    }
   }
 
   font-weight: 900;

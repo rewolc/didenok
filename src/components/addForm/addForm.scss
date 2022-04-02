@@ -1,18 +1,14 @@
 .add-form {
   display: flex;
   align-items: center;
-  justify-content: baseline;
+
   outline: none;
   border: none;
   width: 100%;
   .add-inpt {
     background-color: #f1f1f1;
-    line-height: 10px;
-    margin-left: 30px;
-
+    margin-left: 10px;
     height: 40px;
-    min-width: 40%;
-    font-size: 15px;
     border-radius: 10px;
     padding-left: 10px;
     box-shadow: 0 0 20px 2px #1a1a3230;

@@ -28,7 +28,7 @@ const LeftNav = () => {
     <div className="nav-container">
       <div className="head">
         <div className="logo">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" width="80%" height="100%" />
         </div>
         <div className="settings">
           <div className="dots">&#9679;&#9679;&#9679;</div>

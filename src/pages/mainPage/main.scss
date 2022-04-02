@@ -5,20 +5,19 @@
   padding: 3.5% 3.5% 0 3%;
   .teams-header {
     display: flex;
-    flex-direction: row;
+
     font-weight: bold;
     height: 30px;
-    .teams-text{
-    
+    .teams-text {
       line-height: 30px;
     }
   }
 
   .teams-container {
     width: 100%;
-    margin-top: 50px;
+
     display: grid;
-    
+
     grid-gap: 30px;
     align-items: baseline;
   }
