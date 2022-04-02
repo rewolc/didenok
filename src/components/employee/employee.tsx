@@ -28,7 +28,7 @@ const Employee: React.FC<{ name: string; leadName: string; id: number ,indx : nu
       <div className="employee">{name ? name : ""}</div>
       <div
         className="teams-add small del"
-        onClick={() => dispatch(removeName({  name, indx }))}
+        onClick={() => dispatch(removeName({ leadName, name, indx }))}
       >
         +
       </div>
