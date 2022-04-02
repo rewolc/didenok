@@ -5,10 +5,11 @@ import { useAppDispatch, useAppSelector } from "../../redux/actions";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Employee: React.FC<{ name: string; leadName: string; id: number }> = ({
+const Employee: React.FC<{ name: string; leadName: string; id: number ,indx : number }> = ({
   name,
   leadName,
   id,
+  indx
 }) => {
   const navigate = useNavigate();
 
@@ -27,7 +28,7 @@ const Employee: React.FC<{ name: string; leadName: string; id: number }> = ({
       <div className="employee">{name ? name : ""}</div>
       <div
         className="teams-add small del"
-        onClick={() => dispatch(removeName({ leadName, name }))}
+        onClick={() => dispatch(removeName({  name, indx }))}
       >
         +
       </div>

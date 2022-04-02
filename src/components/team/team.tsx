@@ -27,7 +27,7 @@ const Team: React.FC<{
     
     if (name.trim() !== "") {
 
-      dispatch(addName({ leadName, name }));
+      dispatch(addName({ leadName, name, id }));
       setTimeout(() => newletter(""), 100);
       
     } else {
@@ -85,7 +85,7 @@ const Team: React.FC<{
           <input type="submit" value="+" className="teams-add small " />
         </form>
         {employees.map((i, indx) => (
-          <Employee key={indx} id={id!} leadName={leadName} name={i.name!} />
+          <Employee key={indx} id={id!} leadName={leadName} name={i.name!} indx={indx} />
         ))}
       </div>
     </div>

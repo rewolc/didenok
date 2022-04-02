@@ -25,7 +25,7 @@ export const teamSlice = createSlice({
   reducers: {
     addName: (state, action: PayloadAction<IAction>) => {
       state.teams = state.teams.map((team) =>
-        team.leadName === action.payload.leadName
+        team.id === action.payload.id
           ? {
               ...team,
               employees: [...team.employees, { name: action.payload.name }],
@@ -40,7 +40,7 @@ export const teamSlice = createSlice({
           ? {
               ...team,
               employees: team.employees.filter(
-                (employee) => employee.name !== action.payload.name
+                (employee,indx) => indx !== action.payload.indx
               ),
             }
           : team

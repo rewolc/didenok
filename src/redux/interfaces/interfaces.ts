@@ -31,4 +31,5 @@ export interface IAction {
   id? : number 
   key? : string
   value? :string
+  indx? : number
 }
