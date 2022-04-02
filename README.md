@@ -1,1 +1,1 @@
-https://vercel.com/rewolc/admin-teams 
+https://admin-teams.vercel.app/
