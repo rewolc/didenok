@@ -5,6 +5,9 @@
   outline: none;
   border: none;
   width: 100%;
+  &:focus {
+    box-shadow: 4px 0px 7px 3px rgba(198, 242, 33, 1);
+  }
   .add-inpt {
     background-color: #f1f1f1;
     margin-left: 10px;
@@ -13,9 +16,6 @@
     padding-left: 10px;
     box-shadow: 0 0 20px 2px #1a1a3230;
     transition: all 0.5s;
-    &:focus {
-      box-shadow: 0 0 20px 2px #c1e738d8;
-    }
   }
 
   .teams-add {

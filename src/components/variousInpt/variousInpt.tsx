@@ -1,19 +1,16 @@
 import "./variousInpt.scss";
 import { useAppDispatch } from "../../redux/actions";
 import { teamSlice } from "../../redux/tems-reducer/teams-reducer";
-import { TeamsState } from "../../redux/interfaces/interfaces";
+import { ITeamState } from "../../redux/interfaces/interfaces";
 
 const VariousInpt: React.FC<{
-
   formName: string[];
   name: string;
   id: number;
-  team: TeamsState;
-
+  team: ITeamState;
 }> = ({ formName, name, id, team }) => {
-
   const formNameString = formName.join("");
-  
+
   const { changeEmployeeInfo } = teamSlice.actions;
 
   const dispatch = useAppDispatch();

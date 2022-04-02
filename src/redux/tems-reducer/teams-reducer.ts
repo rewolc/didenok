@@ -1,4 +1,4 @@
-import { TeamsState, IAction } from "../interfaces/interfaces";
+import { ITeamState, IAction } from "../interfaces/interfaces";
 import {
   fetchTeams,
   postTeams,
@@ -8,7 +8,7 @@ import {
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface InitialTeamState {
-  teams: TeamsState[];
+  teams: ITeamState[];
   loading: boolean;
   error: string;
 }
@@ -40,7 +40,7 @@ export const teamSlice = createSlice({
           ? {
               ...team,
               employees: team.employees.filter(
-                (employee,indx) => indx !== action.payload.indx
+                (employee, indx) => indx !== action.payload.indx
               ),
             }
           : team
@@ -73,7 +73,7 @@ export const teamSlice = createSlice({
   extraReducers: {
     [fetchTeams.fulfilled.type]: (
       state,
-      action: PayloadAction<TeamsState[]>
+      action: PayloadAction<ITeamState[]>
     ) => {
       state.loading = false;
       state.error = "";
@@ -87,7 +87,7 @@ export const teamSlice = createSlice({
       state.error = action.payload;
     },
 
-    [postTeams.fulfilled.type]: (state, action: PayloadAction<TeamsState>) => {
+    [postTeams.fulfilled.type]: (state, action: PayloadAction<ITeamState>) => {
       state.loading = false;
       state.error = "";
       state.teams = [...state.teams, action.payload];

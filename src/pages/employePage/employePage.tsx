@@ -8,7 +8,6 @@ import { updateTeamInside } from "../../redux/tems-reducer/team-actions";
 import VariousInpt from "../../components/variousInpt/variousInpt";
 
 const EmployePage: React.FC = () => {
-  
   const employeName = decodeURI(useLocation().pathname.slice(3));
   const idEmployee = decodeURI(useLocation().pathname.slice(1, 2));
 

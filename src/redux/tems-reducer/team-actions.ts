@@ -1,4 +1,4 @@
-import { TeamsState } from "../interfaces/interfaces";
+import { ITeamState } from "../interfaces/interfaces";
 import axios from "axios";
 
 import { createAsyncThunk } from "@reduxjs/toolkit";
@@ -6,7 +6,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 export const fetchTeams = createAsyncThunk(
   "team/fetchAll",
   async (_, thunkApi) => {
-    const response = await axios.get<TeamsState[]>(
+    const response = await axios.get<ITeamState[]>(
       "https://6244272539aae3e3b74c25f9.mockapi.io/api/didenok-task/1/teams"
     );
 
@@ -17,7 +17,7 @@ export const postTeams = createAsyncThunk(
   "team/post",
 
   async (leadName: string | number) => {
-    const response = await axios.post<TeamsState[]>(
+    const response = await axios.post<ITeamState[]>(
       "https://6244272539aae3e3b74c25f9.mockapi.io/api/didenok-task/1/teams",
       {
         leadName: `${leadName}`,
@@ -32,8 +32,8 @@ export const postTeams = createAsyncThunk(
 export const updateTeamInside = createAsyncThunk(
   "team/updateTeamInside",
 
-  async (props: TeamsState) => {
-    const response = await axios.put<TeamsState>(
+  async (props: ITeamState) => {
+    const response = await axios.put<ITeamState>(
       `https://6244272539aae3e3b74c25f9.mockapi.io/api/didenok-task/1/teams/${props.id}`,
 
       {
@@ -49,7 +49,7 @@ export const updateTeam = createAsyncThunk(
   "team/updateTeam",
 
   async (id: number) => {
-    const response = await axios.delete<TeamsState>(
+    const response = await axios.delete<ITeamState>(
       `https://6244272539aae3e3b74c25f9.mockapi.io/api/didenok-task/1/teams/${id}`
     );
 

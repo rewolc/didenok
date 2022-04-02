@@ -5,12 +5,12 @@ import { useAppDispatch, useAppSelector } from "../../redux/actions";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Employee: React.FC<{ name: string; leadName: string; id: number ,indx : number }> = ({
-  name,
-  leadName,
-  id,
-  indx
-}) => {
+const Employee: React.FC<{
+  name: string;
+  leadName: string;
+  id: number;
+  indx: number;
+}> = ({ name, leadName, id, indx }) => {
   const navigate = useNavigate();
 
   const { teams } = useAppSelector((state) => state.teamsReducer);
@@ -23,13 +23,17 @@ const Employee: React.FC<{ name: string; leadName: string; id: number ,indx : nu
     dispatch(updateTeamInside(emplTeam[0]));
   }, [emplTeam]);
 
+  const hadnleDelEmploye = () => {
+    const areUShure = window.confirm(`Удалить ${name} из команды ${leadName}?`);
+    if (areUShure) {
+      dispatch(removeName({ leadName, name, indx }));
+    }
+  };
+
   return (
     <div className="employee-container">
       <div className="employee">{name ? name : ""}</div>
-      <div
-        className="teams-add small del"
-        onClick={() => dispatch(removeName({ leadName, name, indx }))}
-      >
+      <div className="teams-add small del" onClick={hadnleDelEmploye}>
         +
       </div>
       <div

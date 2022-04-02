@@ -2,10 +2,7 @@ import "./nav.scss";
 
 import { useLocation } from "react-router-dom";
 
-const NavItem: React.FC<{ active: boolean; text: string }> = ({
-  active,
-  text,
-}) => {
+const NavItem: React.FC<{ text: string }> = ({ text }) => {
   const location = useLocation().pathname.length;
   return (
     <div className="navItem-cont">

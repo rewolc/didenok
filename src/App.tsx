@@ -11,15 +11,13 @@ import { fetchTeams } from "./redux/tems-reducer/team-actions";
 import { Route, Routes } from "react-router-dom";
 
 const App = () => {
-
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(fetchTeams());
   }, []);
-  
-  return (
 
+  return (
     <div className="container">
       <LeftNav />
       <Routes>
@@ -30,7 +28,6 @@ const App = () => {
         />
       </Routes>
     </div>
-
   );
 };
 

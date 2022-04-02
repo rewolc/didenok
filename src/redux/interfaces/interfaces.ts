@@ -13,19 +13,14 @@ export interface IEmployee {
   'Оформление'?:  string;
 }
 
-export interface TeamsState {
+export interface ITeamState {
   id : number;
   leadName: string;
   employees: IEmployee[]
 }
 
-export interface IaddEmployee {
-  name : string
-  id : number
-}
-
 export interface IAction {
-  teams? : TeamsState[]
+  teams? : ITeamState[]
   name? : string 
   leadName? : string 
   id? : number 
