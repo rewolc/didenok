@@ -1,11 +1,18 @@
 import "./nav.scss";
 
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const NavItem: React.FC<{ text: string }> = ({ text }) => {
+  
   const location = useLocation().pathname.length;
+  const navigate = useNavigate();
+
   return (
-    <div className="navItem-cont">
+    <div
+      className="navItem-cont"
+      onClick={() => (text == "Команды" ? navigate("/") : undefined)}
+    >
       <div
         className={`circle ${
           location === 1

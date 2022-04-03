@@ -1,10 +1,14 @@
-import Team from "../../components/team/team";
-
-import { useAppSelector } from "../../redux/actions";
 import "./main.scss";
+
+import Team from "../../components/team/team";
 import AddForm from "../../components/addForm/addForm";
 
+import { useAppSelector } from "../../redux/actions";
+
+
+
 const Main: React.FC = () => {
+
   const { teams } = useAppSelector((state) => state.teamsReducer);
 
   return (

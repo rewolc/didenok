@@ -9,6 +9,7 @@ const VariousInpt: React.FC<{
   id: number;
   team: ITeamState;
 }> = ({ formName, name, id, team }) => {
+
   const formNameString = formName.join("");
 
   const { changeEmployeeInfo } = teamSlice.actions;
