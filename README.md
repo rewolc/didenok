@@ -1,7 +1,7 @@
 
-# Auth Application
+# Teams constrol Application
 
-###### This is an auth application with _adaptive layout_ , where you can register, login and change password of your user
+###### This is a teams control with _adaptive layout_ , where you can add/delete a team, add/delete emplouees in it and change info about employees on the enployee's page.
  
  ### Stack 
 
@@ -42,6 +42,8 @@ To Visit App:
 
 ![Screenshot_4](https://user-images.githubusercontent.com/95301875/163735651-fa83b344-bcd0-46b9-b13e-bda7613acfac.png)
 
-![Screenshot_5](https://user-images.githubusercontent.com/95301875/163735657-5b06725e-26b2-47a5-a5e3-0e75cb25455d.png)
+![Screenshot_6](https://user-images.githubusercontent.com/95301875/163735772-7c35ce69-fe99-4c7f-9924-ce574d61e36e.png)
+
+
 
 
